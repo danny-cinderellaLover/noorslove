@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Cinderella 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="typing">To my beautiful,</h1>
+  <p class="typing" style="animation-delay: 2s">
+    I made this for you because you deserve a love letter coded with care. 💻💌
+  </p>
+  <p class="typing" style="animation-delay: 4s">
+    Every day with you feels like stargazing in summer. So here’s a piece of my heart, wrapped in code.
+  </p>
+
+
+  <button onclick="playSong()">Play our song 🎶</button>
+  <audio id="song" src="images/music/yoursong.mp3"></audio>
+
+  <button onclick="compliment()">Click for a compliment 🥺</button>
+  <p id="complimentText"></p>
+
+  <script>
+    function playSong() {
+      document.getElementById("song").play();
+    }
+
+    const compliments = [
+      "You’re the sun in my solar system.",
+      "Your smile rewires my brain chemistry.",
+      "You're beautiful, inside and out.",
+      "You're my favorite person to love."
+    ];
+
+    function compliment() {
+      const index = Math.floor(Math.random() * compliments.length);
+      document.getElementById("complimentText").innerText = compliments[index];
+    }
+  </script>
+</body>
+</html>
